@@ -1,0 +1,60 @@
+{% extends 'layout.html' %} 
+{% block title %} 
+Forgot Password
+{% endblock %}
+{% block content %}
+
+ <!-- ======= Breadcrumbs ======= -->
+ <section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Forgot Password</h2>
+      <ol>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li>Forgot password</li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+<!-- ======= Contact Section ======= -->
+
+
+
+
+    <div class="row mt-5 justify-content-center" data-aos="fade-up">
+      <div class="col-lg-4">
+        <h2>Forget Password</h2><br>
+        <form action="" method="post" >
+          {% csrf_token %}
+          
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="name" placeholder="Your Email"  />
+              <div class="validate"></div>
+              <br>
+            
+            
+          
+          
+           
+            
+          
+          
+          <div class="text-center">
+            <button class=" btn btn-success" type="submit">
+              Forgot Password
+            </button></div>
+        </form><br>
+        <small>Login to my account<a href="{% url 'login' %}">Login Now</a></small>
+
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
+ 
+
+{% endblock %}
